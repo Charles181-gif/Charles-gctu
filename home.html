@@ -1,0 +1,240 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+      @layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+  	<div class="bg-primary py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+        <h1 class="text-2xl font-bold text-primary-foreground">Charles' Restaurant</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="home.html" class="text-primary-foreground hover:text-primary/80">Home</a></li>
+                <li><a href="Menu.html" class="text-primary-foreground hover:text-primary/80">Menu</a></li>
+                <li><a href="about.html" class="text-primary-foreground hover:text-primary/80">About</a></li>
+                <li><a href="contact.html" class="text-primary-foreground hover:text-primary/80">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+    
+    <div class="relative bg-cover bg-center h-screen" ><video loop muted autoplay>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Charles' Restaurant Experience</h1>
+        <p class="text-lg mb-8">Delightful culinary journeys await you, come savor our exquisite dishes and vibrant ambiance.</p>
+        <div class="flex space-x-4">
+            <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-3 rounded-full" onclick="window.location.href='reservation.html'">Reserve</button>
+            
+            <button class="bg-primary text-primary-foreground hover:bg-primary/80 px-6 py-3 rounded-full" onclick="window.location.href='menu.html'">Menu</button>
+        </div>
+    </div>
+</div>
+ <div class="flex flex-col md:flex-row items-center justify-between p-8 bg-background rounded-lg shadow-lg">
+  <div class="md:w-1/2">
+    <h1 class="text-4xl font-bold text-foreground">Welcome to Charles' Restaurant</h1>
+    <p class="mt-4 text-muted-foreground">
+      At Charles', we create unforgettable dining experiences through our carefully crafted menu and warm atmosphere. Join us for a meal to remember.
+    </p>
+    <button class="mt-6 bg-secondary text-secondary-foreground hover:bg-secondary/80 py-2 px-4 rounded-lg" onclick="window.location.href='menu.html'">
+      Explore
+    </button>
+  </div>
+  <div class="md:w-1/2 mt-6 md:mt-0">
+    <img aria-hidden="true" alt="Glasses on a table" src="istockphoto-1 l.jpg" class="rounded-lg shadow-md" />
+  </div>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between p-8 bg-background">
+    <div class="flex flex-col md:w-1/2">
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden mb-4">
+        <img src="Diningtable.jpg" alt="A Pic of a Diningtable" class="w-full h-auto" />
+      </div>
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="istockphoto-146.jpg" alt="Cooks" class="w-full h-auto" />
+      </div>
+    </div>
+    <div class="md:w-1/2 md:pl-8">
+      <h2 class="text-3xl font-bold text-primary">Our Story</h2>
+      <p class="mt-4 text-muted-foreground">
+        Charles' Restaurant is dedicated to serving delicious food with exceptional service. Discover our passion for culinary excellence and community engagement.We have all kinds of dishes around the world. This restaurant was established in the year 2019 with only 5 stafs in Larteh in the Eastern-Region of Ghana. Charles' now has 200 staffs from foreign countries and Ghana and serves a lot of dishes from Africa and other continents.It is noe located at Osu- Accra and runs 24/7 daily. Charles' received an award for the best restaurant in Africa and the winning best Ghanain restaurant so far
+      </p>
+    </div>
+  </div>
+  <div class="bg-background p-6 rounded-lg shadow-lg max-w-md mx-auto text-center">
+    <div class="text-xl text-primary mb-4">
+        ★★★★★
+    </div>
+    <p class="text-muted-foreground mb-4">
+        Charles' offers an amazing dining experience! The ambiance is perfect, and the food is absolutely delicious. Highly recommend to everyone seeking a memorable meal.
+    </p>
+    <div class="flex items-center justify-center">
+        <img aria-hidden="true" alt="Ryan Opare" src="ampesi.jfif" class="rounded-full mr-2" />
+        <span class="text-secondary-foreground">Ryan Opare</span>
+    </div>
+</div>
+<div class="bg-background p-8">
+    <h2 class="text-3xl font-bold text-center mb-4">Our Services</h2>
+    <p class="text-muted-foreground text-center mb-8">Explore our diverse offerings designed to enhance your dining experience at Charles' restaurant.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-card rounded-lg shadow-lg p-4">
+        <img src="culinary delight.jfif" alt="Culinary Delights" class="rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Culinary Delights</h3>
+        <p class="text-muted-foreground">Indulge in our exquisite menu featuring fresh ingredients and unique flavors crafted by our best chefs.</p>
+      </div>
+      <div class="bg-card rounded-lg shadow-lg p-4">
+        <img src="kit.jpg" alt="Caterers" class="rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Event Catering</h3>
+        <p class="text-muted-foreground">Let us cater your special events with customized menus that suit your needs and preferences.Ready for any event</p>
+      </div>
+      <div class="bg-card rounded-lg shadow-lg p-4">
+        <img src="safari.jfif" alt="Dining Experience in Safari Valley" class="rounded-lg mb-4" />
+        <h3 class="text-xl font-semibold">Dining Experience</h3>
+        <p class="text-muted-foreground">Join us for a memorable dining experience and the breeze that combines great food and exceptional service.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-background text-foreground p-8 flex justify-between items-start">
+    <div class="flex flex-col">
+      <h1 class="text-2xl font-bold">Welcome</h1>
+      <p class="text-muted-foreground">Delicious food and great ambiance awaits you from all over Africa and the world.</p>
+      <div class="flex space-x-4 mt-4">
+        <a href="https://www.facebook.com/" aria-label="Facebook">
+          <img aria-hidden="true" alt="facebook-icon" src="fb.png" />
+        </a>
+        <a href="https://www.instagram.com/accounts/login/?hl=en" aria-label="Instagram">
+          <img aria-hidden="true" alt="instagram-icon" src="ig.png" />
+        </a>
+        <a href="https://www.tiktok.com/login" aria-label="TikTok">
+          <img aria-hidden="true" alt="tiktok-icon" src="tik.png" />
+        </a>
+      </div>
+      <p class="text-muted-foreground mt-4">© Charles' Restaurant 2024. All rights reserved.</p>
+    </div>
+    <div class="flex flex-col">
+      <h2 class="text-lg font-semibold">MENU</h2>
+      <p class="text-muted-foreground">+233 598670195</p>
+      <p class="text-muted-foreground">18charlescharles@gmail.com</p>
+    </div>
+    <div class="flex flex-col">
+      <h2 class="text-lg font-semibold">CONTACT</h2>
+      <label class="text-muted-foreground" for="email">Enter your email address</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Your email goes here"
+        class="bg-input text-foreground p-2 rounded-lg mt-1 mb-2"
+      />
+      <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded-lg">
+        Submit your information now
+      </button>
+    </div>
+  </footer>
+
+  </body>
+</html>

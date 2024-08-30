@@ -1,0 +1,202 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <div class="bg-primary py-4">
+      <div class="container mx-auto flex items-center justify-between px-4">
+          <h1 class="text-2xl font-bold text-primary-foreground">Charles' Restaurant</h1>
+          <nav>
+              <ul class="flex space-x-4">
+                  <li><a href="home.html" class="text-primary-foreground hover:text-primary/80">Home</a></li>
+                  <li><a href="Menu.html" class="text-primary-foreground hover:text-primary/80">Menu</a></li>
+                  <li><a href="about.html" class="text-primary-foreground hover:text-primary/80">About</a></li>
+                  <li><a href="contact.html" class="text-primary-foreground hover:text-primary/80">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+  
+    <div class="flex flex-col md:flex-row items-center p-8 bg-background rounded-lg shadow-lg">
+  <div class="md:w-1/2">
+    <h1 class="text-5xl font-bold mb-4 text-primary">Welcome to Charles' Restaurant</h1>
+    <p class="text-muted-foreground mb-6 text-lg">
+      Discover exceptional dining experiences crafted with passion and dedication. Our site showcases our menu, ambiance, and commitment to culinary excellence.
+    </p>
+    <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-3 rounded-lg transition duration-200" onclick="window.location.href='menu.html'">
+      Explore
+    </button>
+  </div>
+  <div class="md:w-1/2 mt-8 md:mt-0">
+    <img aria-hidden="true" alt="Restaurant interior " src="pip.jfif" class="rounded-lg shadow-md" />
+  </div>
+</div>
+
+<div class="bg-card p-6 rounded-lg mt-8 shadow-lg">
+  <h2 class="text-4xl font-bold text-center mb-6">Our Achievements</h2>
+  <div class="flex justify-around">
+    <div class="text-center">
+      <h3 class="text-3xl font-bold">10000+</h3>
+      <p class="text-muted-foreground">Fine dining experiences</p>
+    </div>
+    <div class="text-center">
+      <h3 class="text-3xl font-bold">1000+</h3>
+      <p class="text-muted-foreground">Trusted by many</p>
+    </div>
+  </div>
+</div>
+<div class="mt-8 p-6 bg-background rounded-lg shadow-lg">
+  <h2 class="text-4xl font-bold text-center mb-4"></h2>
+  <p class="text-muted-foreground mb-4">
+    Developed a  website for a restaurant, enhancing online presence and user engagement. Focused on user-friendly navigation and appealing design.It saves a lot of time with it's reservation options  
+  </p>
+  
+  <div class="space-y-6">
+    <div>
+      <h3 class="text-3xl font-bold">Restaurant Website Project</h3>
+      <p class="text-muted-foreground">Charles' Restaurant</p>
+      <p class="text-muted-foreground">January 2019 - Date</p>
+      <p class="text-muted-foreground mb-4">
+        Created an engaging platform showcasing menu, location, and reservation options.
+      </p>
+      <p class="text-muted-foreground mb-4">
+        We keep on improving with the help of our staffs and the customers as a whole
+      </p>
+    </div>
+    <div>
+      <h3 class="text-3xl font-bold">Restaurant Website Development</h3>
+      <p class="text-muted-foreground">Charles' Bistro</p>
+      <p class="text-muted-foreground">April 2023 - June 2023</p>
+      <p class="text-muted-foreground">
+        Implemented features for online ordering and customer feedback to improve service.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="mt-8 p-6 bg-card rounded-lg shadow-lg">
+  <h2 class="text-4xl font-bold text-center mb-6">Inspiration</h2>
+  <img aria-hidden="true" alt="Inspiration by Joel-Robuchon" src="Joel-Robuchon.jpg" class="rounded-lg shadow-md" />
+  <p class="text-muted-foreground mt-4 text-center">
+    Introducing Joël Robuchon – the chef with the most Michelin stars. He holds the number one spot among the top 10 chefs in the world, which makes him the best chef in the world according to the Michelin star rating. Although he died with “only” 28 stars, at one point, Robuchon was the proud owner of 32. He was also named “Chef of the Century” on numerous occasions.
+
+He specialized in French cuisine and owned 12 restaurants. Joël also liked to mentor young chefs. One of his former students was the now infamous Gordon Ramsay.
+
+Nowadays, a chain of famous restaurants was named after French chef cook Joël Robuchon. Twelve restaurants in the world with delicious French cuisine have the name L’Atelier de Joël Robuchon. They located in big cities, namely Hong Kong, Paris, New York City, Shanghai, Taipei, Bangkok, Montreal, Tokyo, and Singapore. One of these outstanding restaurants is also located in the world-famous casino place Las Vegas, as reported by CasinoValley.
+
+Chef Joël Robuchon, the owner of the restaurants, where French haute cuisine is served, used creativity while designing the places. That’s why the interior also deserves attention. Most of the tables are put in an unusual way so the visitors can see how the food is being prepared. The word “L’Atelier” can be translated as “workshop”. Actually, the word “atelier” itself refers to an artist’s workshop in the decorative or fine arts.
+  </p>
+</div>
+
+    <div class="md:w-1/2 mt-4 md:mt-0 p-4 bg-card rounded-lg shadow-md flex items-center">
+      <img aria-hidden="true" alt="Customer photo" src="Joel-Robuchon.jpg" class="rounded-full mr-4" />
+      <div>
+        <p class="text-lg text-muted-foreground mb-2">★★★★★</p>
+        <p class="text-muted-foreground">
+          It was wonderful to meet you and enjoy such a lovely introduction to your food. Firm favourite in this household now. 
+        </p>
+        <p class="font-bold text-primary">Joel-Robuchon</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </body>
+  <footer class="bg-primary text-primary-foreground py-4 text-center">
+    <p>&copy; 2024 Charles'. All rights reserved.</p>
+</footer>
+</html>

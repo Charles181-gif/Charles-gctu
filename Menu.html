@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <div class="bg-primary py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+        <h1 class="text-2xl font-bold text-primary-foreground">Charles' Restaurant</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="home.html" class="text-primary-foreground hover:text-primary/80">Home</a></li>
+                <li><a href="Menu.html" class="text-primary-foreground hover:text-primary/80">Menu</a></li>
+                <li><a href="about.html" class="text-primary-foreground hover:text-primary/80">About</a></li>
+                <li><a href="contact.html" class="text-primary-foreground hover:text-primary/80">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="container mx-auto px-4 py-8 flex flex-wrap justify-around">
+    <div class="w-64 p-4">
+        <h3 class="text-lg font-semibold">Tasty Waakye <span class="text-primary">¢150</span></h3>
+        <p class="text-muted-foreground">Savor our waakye served with fish/meat in local leafs enrinced in vitamins</p>
+        <img src="waakye.jfif" alt="waakye" class="mt-4 rounded-lg">
+    </div>
+    <div class="w-64 p-4">
+        <h3 class="text-lg font-semibold">Delicious Beans <span class="text-primary">¢120</span></h3>
+        <p class="text-muted-foreground">Enjoy our delicious beans served with fried riped plantain and fish/meat </p>
+        <img src="beans.jfif" alt="Delicious Beans" class="mt-4 rounded-lg">
+    </div>
+    <div class="w-64 p-4">
+        <h3 class="text-lg font-semibold">Banku <span class="text-primary">¢100</span></h3>
+        <p class="text-muted-foreground">Enjoy our fresh banku served with okro stew/soup or tilapia. It's highly rated in Ghana </p>
+        <img src="banku.jfif" alt="Banku" class="mt-4 rounded-lg">
+    </div>
+    <div class="w-64 p-4">
+        <h3 class="text-lg font-semibold">Tasty Salad <span class="text-primary">¢80</span></h3>
+        <p class="text-muted-foreground">Treat yourself to our decadent salad, perfect for satisfying your health with vitamins.</p>
+        <img src="istockphoto- le.jpg" alt="Sweet Desserts" class="mt-4 rounded-lg">
+    </div>
+    <div class="w-64 p-4">
+        <h3 class="text-lg font-semibold">Refreshing Drinks <span class="text-primary">¢50</span></h3>
+        <p class="text-muted-foreground">Quench your thirst with our selection of fresh juices and crafted cocktails.</p>
+        <img src="sagb.jfif" alt="South African Ginger Beer" class="mt-4 rounded-lg">
+    </div>
+    <div class="w-64 p-4">
+        <h3 class="text-lg font-semibold">Meat Pie <span class="text-primary">¢60</span></h3>
+        <p class="text-muted-foreground">Start your meal with our delicious appetizers, perfect for sharing with friends and family.</p>
+        <img src="meat pie.jfif" alt="Meat Pie" class="mt-4 rounded-lg">
+    </div>
+    <div class="w-64 p-4">
+      <h3 class="text-lg font-semibold"> The Popular Italian Pizza <span class="text-primary">¢200</span></h3>
+      <p class="text-muted-foreground">Start your meal with our delicious pizza from Italy.</p>
+      <img src="pizza.jfif" alt="Pizza" class="mt-4 rounded-lg">
+  </div>
+  <div class="w-64 p-4">
+    <h3 class="text-lg font-semibold">Ponded Nigerian Yam<span class="text-primary">¢150</span></h3>
+    <p class="text-muted-foreground">Enjoy the highly rated nigerian pounded yam.</p>
+    <img src="Ponded Yam.jfif" alt="Pounded Yam" class="mt-4 rounded-lg">
+</div>
+<div class="w-64 p-4">
+  <h3 class="text-lg font-semibold">Egusi Soup <span class="text-primary">¢210</span></h3>
+  <p class="text-muted-foreground">Egusi soup is arguably the most popular soup in Nigeria</p>
+  <img src="Egusi stew.jfif" alt="Egusi" class="mt-4 rounded-lg">
+</div>
+<div class="w-64 p-4">
+  <h3 class="text-lg font-semibold">South African Braai <span class="text-primary">¢300</span></h3>
+  <p class="text-muted-foreground">Consists of a variety of meat like beef and sosatie (skewered meat) barbecued on a grill. </p>
+  <img src="braai.jfif" alt="Braai" class="mt-4 rounded-lg">
+</div>
+</div>
+<div class="bg-background text-foreground py-16 text-center">
+    <h1 class="text-4xl font-bold mb-4">Table Reservations</h1>
+    <p class="text-lg mb-8">Reserve your table online for a delightful dining experience at Charles' restaurant today.</p>
+    <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-2 rounded-lg" onclick="window.location.href='reservation.html'">Reserve</button>
+</div>
+<div class="container mx-auto py-10">
+    <h2 class="text-3xl font-bold text-center text-zinc-800 dark:text-zinc-200">Gallery Showcase</h2>
+    <p class="mt-2 text-center text-zinc-600 dark:text-zinc-400">Explore our delicious dishes and vibrant restaurant atmosphere through images.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+        <div class="overflow-hidden rounded-lg shadow-lg">
+            <img src="istockphoto- le.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+            <img src="ch.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+            <img src="images (2).jfif" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+            <img src="isbur.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+            <img src="ppl.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+            <img src="images (3).jfif" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+            <img src="istockphoto-1454.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+            <img src="istockphoto l.jpg" alt="" class="w-full h-full object-cover" />
+        </div>
+    </div>
+</div>
+<footer class="bg-primary text-primary-foreground py-4 text-center">
+  <p>&copy; 2024 Charles'. All rights reserved.</p>
+  
+</footer>
+
+
+  </body>
+</html>
